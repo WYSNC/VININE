@@ -1,7 +1,13 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:vinine/Primeleague/primeleague_data.dart';
+import 'package:scroll_snap_list/scroll_snap_list.dart';
+import 'package:vinine/HomeScreen/article_data.dart';
+import 'package:vinine/Primeleague/pl_database/primeleague_data.dart';
+import 'package:vinine/utils/constants.dart';
 
+import '../Primeleague/pl_database/primeleague_classes.dart';
 import '../rest/test.dart';
+import 'article_page/news_article_page.dart';
 
 
 class MatchBox extends StatelessWidget {
@@ -28,31 +34,48 @@ class MatchBox extends StatelessWidget {
             ),
           ],
         ),
-        const MatchCard(leagueData: MatchData(team1: TeamData(
-          name: 'VININE',
-          logo: 'assets/images/VININELogoWhite.png',
-          players: 5,
-          div: '4.8',
-          wins: 6,
-          losses: 0,
-          rank: 1,
-          creationdate: '23.11.2020',
-          nation: 'Germany',
-          contact: 'xd',
-        ), team2: TeamData(
-            name: 'TOG',
-            logo: 'assets/images/TOGLogo.png',
-            players: 5,
-            div: '4.8',
-            wins: 5,
-            losses: 1,
-            rank: 2,
-            creationdate: '23.11.2020',
-            nation: 'Germany',
-            contact: 'xd'
-        ),),)
+
+
+        Expanded(
+          child: ScrollSnapList(
+            itemCount: div4.schedule[0].matches.length,
+            itemBuilder: (context , index) {
+              return MatchBuilder(matchData: div4.schedule[index].matches[0],);
+              },
+            initialIndex: 2,
+            itemSize: 300,
+            dynamicItemSize: true,
+            onItemFocus: (index) {  },
+          ),
+        ),
+
+
+
       ],
     );
+  }
+}
+
+
+class MatchBuilder extends StatelessWidget {
+  const MatchBuilder({super.key, required this.matchData});
+
+  final MatchData matchData;
+
+  @override
+  Widget build(BuildContext context) {
+    double length = MediaQuery.of(context).size.width;
+
+    return OpenContainer(
+      openColor: backgroundcolor,
+      closedColor: backgroundcolor,
+      transitionType: ContainerTransitionType.fade,
+      transitionDuration: const Duration(milliseconds: 700),
+      openBuilder: (context, _) => Container(color: Colors.green,),
+      closedBuilder: (context, VoidCallback openContainer) => ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: MatchCard(matchData: matchData,)
+    ));
   }
 }
 

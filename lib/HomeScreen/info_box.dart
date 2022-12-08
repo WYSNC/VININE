@@ -39,7 +39,7 @@ class _InfoBoxState extends State<InfoBox> {
                 ),
               ],
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15),
             Expanded(
               child: ScrollSnapList(
                   itemBuilder: (context, index) {
@@ -58,7 +58,7 @@ class _InfoBoxState extends State<InfoBox> {
                     });
                   }),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -34,8 +34,8 @@ class HomeState extends State<Home> {
         //width: 350,
         child: ListView(
           children: const [
-            SizedBox(height: 500, child:InfoBox(),),
-            MatchBox(),
+            SizedBox(height: 500, child: InfoBox(),),
+            SizedBox(height: 150, child: MatchBox(),),
             StoreBox(),
           ],
         )
