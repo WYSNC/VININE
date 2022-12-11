@@ -1,13 +1,10 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
-import 'package:vinine/HomeScreen/article_data.dart';
 import 'package:vinine/Primeleague/pl_database/primeleague_data.dart';
+import 'package:vinine/rest/match_card.dart';
 import 'package:vinine/utils/constants.dart';
-
 import '../Primeleague/pl_database/primeleague_classes.dart';
-import '../rest/test.dart';
-import 'article_page/news_article_page.dart';
 
 
 class MatchBox extends StatelessWidget {
@@ -16,6 +13,7 @@ class MatchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
+    double length = MediaQuery.of(context).size.width;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -23,7 +21,7 @@ class MatchBox extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Matches', style: themeData.textTheme.headline2,),
+            Padding(padding: const EdgeInsets.only(left: 15),  child: Text('Matches', style: themeData.textTheme.headline2,),),
             Row(
               children: [
                 Text('Show more', style: themeData.textTheme.subtitle1,),
@@ -42,13 +40,12 @@ class MatchBox extends StatelessWidget {
             itemBuilder: (context , index) {
               return MatchBuilder(matchData: div4.schedule[index].matches[0],);
               },
-            initialIndex: 2,
-            itemSize: 300,
+            initialIndex: 0,
+            itemSize: length-30,
             dynamicItemSize: true,
             onItemFocus: (index) {  },
           ),
         ),
-
 
 
       ],
@@ -68,12 +65,13 @@ class MatchBuilder extends StatelessWidget {
 
     return OpenContainer(
       openColor: backgroundcolor,
-      closedColor: backgroundcolor,
+      closedColor: Colors.transparent,
+      closedElevation: 0,
       transitionType: ContainerTransitionType.fade,
       transitionDuration: const Duration(milliseconds: 700),
-      openBuilder: (context, _) => Container(color: Colors.green,),
+      openBuilder: (context, _) => Container(color: Colors.green, child: IconButton(onPressed: () { Navigator.of(context).pop(); }, icon: const Icon(Icons.exit_to_app),)),
       closedBuilder: (context, VoidCallback openContainer) => ClipRRect(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
           child: MatchCard(matchData: matchData,)
     ));
   }

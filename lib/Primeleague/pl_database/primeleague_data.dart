@@ -12,174 +12,19 @@ List<LeagueData> leagueList = [
 
 List<MatchDays> schedule = [
   MatchDays(
-    matches: [
-      MatchData(
-        team1: teamList[0],
-        team2: teamList[1],
-        result: '2:0',
-        date: '25 Oct',
-      ),
-      MatchData(
-        team1: teamList[2],
-        team2: teamList[3],
-        result: '2:0',
-        date: '30 Oct',
-      ),
-      MatchData(
-        team1: teamList[4],
-        team2: teamList[5],
-        result: '2:0',
-        date: '22 Sep',
-      ),
-      MatchData(
-        team1: teamList[6],
-        team2: teamList[7],
-        result: '2:0',
-        date: '06 Feb',
-      ),
-      MatchData(
-        team1: teamList[8],
-        team2: teamList[9],
-        result: '2:0',
-        date: '23 Dec',
-      ),
-    ],
+    matches: matchDay1
   ),
   MatchDays(
-    matches: [
-      MatchData(
-        team1: teamList[0],
-        team2: teamList[2],
-        result: '2:0',
-        date: '25 Oct',
-      ),
-      MatchData(
-        team1: teamList[2],
-        team2: teamList[3],
-        result: '2:0',
-        date: '30 Oct',
-      ),
-      MatchData(
-        team1: teamList[4],
-        team2: teamList[5],
-        result: '2:0',
-        date: '22 Sep',
-      ),
-      MatchData(
-        team1: teamList[6],
-        team2: teamList[7],
-        result: '2:0',
-        date: '06 Feb',
-      ),
-      MatchData(
-        team1: teamList[8],
-        team2: teamList[9],
-        result: '2:0',
-        date: '23 Dec',
-      ),
-    ],
+    matches: matchDay2
   ),
   MatchDays(
-    matches: [
-      MatchData(
-        team1: teamList[0],
-        team2: teamList[3],
-        result: '2:0',
-        date: '25 Oct',
-      ),
-      MatchData(
-        team1: teamList[2],
-        team2: teamList[3],
-        result: '2:0',
-        date: '30 Oct',
-      ),
-      MatchData(
-        team1: teamList[4],
-        team2: teamList[5],
-        result: '2:0',
-        date: '22 Sep',
-      ),
-      MatchData(
-        team1: teamList[6],
-        team2: teamList[7],
-        result: '2:0',
-        date: '06 Feb',
-      ),
-      MatchData(
-        team1: teamList[8],
-        team2: teamList[9],
-        result: '2:0',
-        date: '23 Dec',
-      ),
-    ],
+    matches: matchDay3,
   ),
   MatchDays(
-    matches: [
-      MatchData(
-        team1: teamList[0],
-        team2: teamList[4],
-        result: '2:0',
-        date: '25 Oct',
-      ),
-      MatchData(
-        team1: teamList[2],
-        team2: teamList[3],
-        result: '2:0',
-        date: '30 Oct',
-      ),
-      MatchData(
-        team1: teamList[4],
-        team2: teamList[5],
-        result: '2:0',
-        date: '22 Sep',
-      ),
-      MatchData(
-        team1: teamList[6],
-        team2: teamList[7],
-        result: '2:0',
-        date: '06 Feb',
-      ),
-      MatchData(
-        team1: teamList[8],
-        team2: teamList[9],
-        result: '2:0',
-        date: '23 Dec',
-      ),
-    ],
+    matches: matchDay4
   ),
   MatchDays(
-    matches: [
-      MatchData(
-        team1: teamList[0],
-        team2: teamList[5],
-        result: '2:0',
-        date: '25 Oct',
-      ),
-      MatchData(
-        team1: teamList[2],
-        team2: teamList[3],
-        result: '2:0',
-        date: '30 Oct',
-      ),
-      MatchData(
-        team1: teamList[4],
-        team2: teamList[5],
-        result: '2:0',
-        date: '22 Sep',
-      ),
-      MatchData(
-        team1: teamList[6],
-        team2: teamList[7],
-        result: '2:0',
-        date: '06 Feb',
-      ),
-      MatchData(
-        team1: teamList[8],
-        team2: teamList[9],
-        result: '2:0',
-        date: '23 Dec',
-      ),
-    ],
+    matches: matchDay5
   ),
 ];
 
@@ -189,30 +34,35 @@ List<MatchData> matchDay1 = [
     team2: teamList[1],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
       team1: teamList[2],
       team2: teamList[3],
     result: '2:0',
     date: '30 Oct',
+    time: '21:30',
   ),
   MatchData(
       team1: teamList[4],
       team2: teamList[5],
     result: '2:0',
     date: '22 Sep',
+    time: '21:30',
   ),
   MatchData(
       team1: teamList[6],
       team2: teamList[7],
     result: '2:0',
     date: '06 Feb',
+    time: '21:30',
   ),
   MatchData(
       team1: teamList[8],
       team2: teamList[9],
     result: '2:0',
     date: '23 Dec',
+    time: '21:30',
   ),
 ];
 
@@ -222,30 +72,35 @@ List<MatchData> matchDay2 = [
     team2: teamList[9],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[2],
     team2: teamList[7],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[4],
     team2: teamList[6],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[5],
     team2: teamList[3],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[8],
     team2: teamList[1],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
 ];
 
@@ -255,30 +110,35 @@ List<MatchData> matchDay3 = [
     team2: teamList[1],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[2],
     team2: teamList[3],
     result: '2:0',
     date: '30 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[4],
     team2: teamList[5],
     result: '2:0',
     date: '22 Sep',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[6],
     team2: teamList[7],
     result: '2:0',
     date: '06 Feb',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[8],
     team2: teamList[9],
     result: '2:0',
     date: '23 Dec',
+    time: '21:30',
   ),
 ];
 List<MatchData> matchDay4 = [
@@ -287,30 +147,35 @@ List<MatchData> matchDay4 = [
     team2: teamList[1],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[2],
     team2: teamList[3],
     result: '2:0',
     date: '30 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[4],
     team2: teamList[5],
     result: '2:0',
     date: '22 Sep',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[6],
     team2: teamList[7],
     result: '2:0',
     date: '06 Feb',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[8],
     team2: teamList[9],
     result: '2:0',
     date: '23 Dec',
+    time: '21:30',
   ),
 ];
 List<MatchData> matchDay5 = [
@@ -319,30 +184,35 @@ List<MatchData> matchDay5 = [
     team2: teamList[1],
     result: '2:0',
     date: '25 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[2],
     team2: teamList[3],
     result: '2:0',
     date: '30 Oct',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[4],
     team2: teamList[5],
     result: '2:0',
     date: '22 Sep',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[6],
     team2: teamList[7],
     result: '2:0',
     date: '06 Feb',
+    time: '21:30',
   ),
   MatchData(
     team1: teamList[8],
     team2: teamList[9],
     result: '2:0',
     date: '23 Dec',
+    time: '21:30',
   ),
 ];
 const teamList = [

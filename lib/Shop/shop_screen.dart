@@ -35,6 +35,7 @@ class ShopState extends State<Shop> {
     );
   }
 }
+
 class ShopBuilder extends StatelessWidget {
   const ShopBuilder({super.key, required this.shopData});
 

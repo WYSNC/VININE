@@ -37,10 +37,10 @@ const articleList= [
     author: (UserData(firstName: 'first1', lastName: 'last1', picture: 'assets/images/AvatarLogo.png')),
     imageUrl: 'assets/images/sola.png',
     release: '21.11.2022(1)',
-    headLine: 'Headline 1',
+    headLine: 'Primeleague',
     upperText: 'UpperText 1',
     text: 'Text 1',
-    review: 'Review 1'
+    review: 'Unser neues Lineup für den Winter Split'
   ),
   ArticleData(
       author: (UserData(firstName: 'first2', lastName: 'last2', picture: 'assets/images/drop1.png')),
@@ -78,4 +78,35 @@ const articleList= [
       text: 'Text 1',
       review: 'Review 1'
   ),*/
+];
+
+const headersList= [
+  ArticleData(
+      author: (UserData(firstName: 'first1', lastName: 'last1', picture: 'assets/images/AvatarLogo.png')),
+      imageUrl: 'assets/images/sola.png',
+      release: '21.11.2022(1)',
+      headLine: 'Primeleague',
+      upperText: 'UpperText 1',
+      text: 'Text 1',
+      review: 'Unser neues Lineup für den Winter Split'
+  ),
+  ArticleData(
+      author: (UserData(firstName: 'first2', lastName: 'last2', picture: 'assets/images/drop1.png')),
+      imageUrl: 'assets/images/drop1.png',
+      release: '21.11.2022(2)',
+      headLine: 'Sola stinkt hehe',
+      upperText: 'UpperText 2',
+      text: 'Text 2',
+      review: 'Ich brauche hier einfach nur einen sehr langen Text um zu prüfen, ob das ganze Design weiterhin richtig gut aussehen würde'
+  ),
+  ArticleData(
+      author: (UserData(firstName: 'first3', lastName: 'last3', picture: 'assets/images/drop4.png')),
+      imageUrl: 'assets/images/shop2.png',
+      release: '21.11.2022(3)',
+      headLine: 'Headline 3',
+      upperText: 'UpperText 3',
+      text: 'Text 3',
+      review: 'Review 3'
+  ),
+
 ];

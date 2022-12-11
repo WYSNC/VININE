@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vinine/HomeScreen/article_data.dart';
 import 'package:vinine/utils/constants.dart';
-import 'article_page/comment.dart';
+import 'comment.dart';
 
 class InfoRow extends StatelessWidget {
   const InfoRow({super.key, required this.authorData, required this.release});

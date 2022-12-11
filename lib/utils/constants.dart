@@ -16,14 +16,12 @@ TextTheme TEXT_THEME_DEFAULT = const TextTheme(
       fontWeight: FontWeight.bold,
       fontFamily: 'PlusJakartaSans'
     ),
-
   headline2: TextStyle(
     color: whitecolor,
       fontSize: 32,
       fontWeight: FontWeight.bold,
       fontFamily: 'PlusJakartaSans'
     ),
-
   headline3: TextStyle(
       color: whitecolor,
       fontSize: 20,
@@ -31,16 +29,25 @@ TextTheme TEXT_THEME_DEFAULT = const TextTheme(
   ),
   headline4: TextStyle(
       color: whitecolor,
-      fontSize: 20,
+      fontSize: 14,
       fontFamily: 'PlusJakartaSans'
   ),
-
+  headline5: TextStyle(
+      color: whitecolor,
+      fontSize: 12,
+      fontFamily: 'PlusJakartaSans'
+  ),
+  headline6: TextStyle(
+      color: whitecolor,
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'PlusJakartaSans'
+  ),
   bodyText1: TextStyle(
       color: whitecolor,
       fontSize: 32,
       fontFamily: 'PlusJakartaSans'
     ),
-
   bodyText2: TextStyle(
       color: whitecolor,
       fontSize: 20,
@@ -53,6 +60,7 @@ TextTheme TEXT_THEME_DEFAULT = const TextTheme(
       fontWeight: FontWeight.bold,
       fontFamily: 'PlusJakartaSans'
     ),
+
 );
 
 TextTheme TEXT_THEME_SMALL = TextTheme(

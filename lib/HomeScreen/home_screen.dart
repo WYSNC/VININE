@@ -1,12 +1,11 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:vinine/HomeScreen/news_article_card.dart';
-import 'package:vinine/HomeScreen/store_box.dart';
-import 'package:vinine/utils/constants.dart';
-import 'article_page/news_article_page.dart';
-import 'article_data.dart';
+import 'store_box.dart';
 import 'info_box.dart';
 import 'matches_box.dart';
+import 'team_box.dart';
+import 'academy_box.dart';
+import 'social_box.dart';
+import 'live_box.dart';
 
 
 class Home extends StatefulWidget {
@@ -17,7 +16,6 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-  final trans = ContainerTransitionType.fade;
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +28,15 @@ class HomeState extends State<Home> {
             fit: BoxFit.cover,
           ),
         ),
-        //height: 550,
-        //width: 350,
-        child: ListView(
+        child: ListView(  //TODO
           children: const [
             SizedBox(height: 500, child: InfoBox(),),
             SizedBox(height: 150, child: MatchBox(),),
             StoreBox(),
+            TeamBox(),
+            AcademyBox(),
+            SocialBox(),
+            LiveBox(),
           ],
         )
     );

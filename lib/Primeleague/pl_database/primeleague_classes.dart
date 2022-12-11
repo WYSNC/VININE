@@ -13,12 +13,14 @@ class MatchData {
   final TeamData team2;
   final String result;
   final String date;
+  final String time;
 
   const MatchData({
     required this.team1,
     required this.team2,
     required this.result,
     required this.date,
+    required this.time,
   });
 }
 

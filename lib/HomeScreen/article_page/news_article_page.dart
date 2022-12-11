@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vinine/HomeScreen/article_data.dart';
-import 'package:vinine/HomeScreen/article_page_widgets.dart';
+import 'package:vinine/HomeScreen/article_page/article_page_widgets.dart';
 import 'package:vinine/utils/constants.dart';
 
 class NewsArticle extends StatelessWidget {

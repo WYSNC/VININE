@@ -15,10 +15,11 @@ class Filter extends StatelessWidget{
                 end: Alignment.bottomCenter,
                 colors: [
                   Colors.transparent,
-                  Color(0xff252525)
+                  Color(0xff000000)
                 ],
                 stops: [
-                  0.2, 0.9
+                  0.1,
+                  0.9
                 ]
             ),
             color: Color(0x942C2929),

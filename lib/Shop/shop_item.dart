@@ -32,7 +32,7 @@ class ShopItemState extends State<ShopItem> {
           ),
         ],
       ),
-      body: const Center(child: Text('Shop-Item X'))
+      body: const Center(child: Text('Shop-Item X '))
     );
   }
 }
