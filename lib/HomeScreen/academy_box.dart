@@ -53,8 +53,6 @@ class AcademyBox extends StatelessWidget {
                                         child: Image.asset(
                                           'assets/images/Pius1.png',
                                           fit: BoxFit.cover,
-                                          //width: (length - 30) / 2 - 15,
-                                          //height: (length - 30) / 2 - 15,
                                         )),
                                   ),
                       Text('Pius \"Bladeshow\" Cornelius',
@@ -89,8 +87,6 @@ class AcademyBox extends StatelessWidget {
                                     child: Image.asset(
                                       'assets/images/drop1.png',
                                       fit: BoxFit.cover,
-                                      //width: (length - 30) / 2 - 15,
-                                      //height: (length - 30) / 2 - 15,
                                     ),
                                   ),
                       ),

@@ -8,63 +8,126 @@ class SocialBox extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     double length = MediaQuery.of(context).size.width;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 15, top: 15),
-          child: Text(
-            'Social',
-            style: themeData.textTheme.headline2,
-          ),
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Padding(
+        padding: const EdgeInsets.only(left: 15, top: 15),
+        child: Text(
+          'Social',
+          style: themeData.textTheme.headline2,
         ),
-        Padding(
-            padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      ),
+      Padding(
+          padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/images/instagram.png',
-                        fit: BoxFit.cover,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                        child: InkWell(
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Instagram'),
+                                  content: const Text(
+                                      'Möchtest du wirklich unsere Instagram Seite besuchen'),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('Hell nah')),
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('OKAYYY LETS GO')),
+                                  ],
+                                ));
+                          },
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/instagram.png',
+                          width: 55,
+                        ),
                       ),
-                      Text('Instagram', style: themeData.textTheme.headline6),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/images/twitter.png',
-                        fit: BoxFit.cover,
+                    )),
+                    Expanded(
+                        child: InkWell(
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text('Twitter'),
+                                  content: const Text(
+                                      'Möchtest du wirklich unsere Twitter Seite besuchen'),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('Hell nah')),
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('OKAYYY LETS GO')),
+                                  ],
+                                ));
+                          },
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/twitter.png',
+                          width: 70,
+                        ),
                       ),
-                      Text('Twitter', style: themeData.textTheme.headline6),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/images/website.png',
-                        color: Colors.white,
-                        fit: BoxFit.cover,
+                    )),
+                    Expanded(
+                        child: InkWell(
+                      onTap: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                                  title: const Text('Website'),
+                                  content: const Text(
+                                      'Möchtest du wirklich unsere Website besuchen'),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('Hell nah')),
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('OKAYYY LETS GO')),
+                                  ],
+                                ));
+                      },
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/website.png',
+                          width: 80,
+                        ),
                       ),
-                      Text('Website', style: themeData.textTheme.headline6),
-                    ],
-                  ),
+                    )),
+                  ],
                 ),
-              ],
-            )
-        ),
-      ],
-    );
+                Row(
+                  children: [
+                    Expanded(
+                        child: Text(
+                      'Instagram',
+                      style: themeData.textTheme.headline6,
+                      textAlign: TextAlign.center,
+                    )),
+                    Expanded(
+                        child: Text(
+                      'Twitter',
+                      style: themeData.textTheme.headline6,
+                      textAlign: TextAlign.center,
+                    )),
+                    Expanded(
+                        child: Text(
+                      'Website',
+                      style: themeData.textTheme.headline6,
+                      textAlign: TextAlign.center,
+                    )),
+                  ],
+                ),
+              ]))
+    ]);
   }
-}//Git test
+}

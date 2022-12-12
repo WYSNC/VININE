@@ -28,6 +28,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'VININE',
       theme: ThemeData(
+        dialogTheme: const DialogTheme(
+          backgroundColor: backgroundcolor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10))
+            )
+        ),
         backgroundColor: blackcolor,
         scaffoldBackgroundColor: backgroundcolor,
         textTheme: screenWidth < 500 ? TEXT_THEME_SMALL : TEXT_THEME_DEFAULT,
