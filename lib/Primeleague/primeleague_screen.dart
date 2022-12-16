@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
-
+import 'package:vinine/Primeleague/match_box.dart';
+import 'package:vinine/Primeleague/standings_box.dart';
+import 'package:vinine/Primeleague/twitter_box.dart';
+import '../HomeScreen/team_box.dart';
 import '../utils/constants.dart';
 
 class Primeleague extends StatefulWidget {
@@ -20,22 +23,19 @@ class _PrimeleagueState extends State<Primeleague> {
     return Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/shop1.png',),
+            image: AssetImage('assets/images/VININEBackground.png',),
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 100),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text('NEW', style: TextStyle(color: maincolor, fontSize: 76, fontWeight: FontWeight.bold),),
-              Padding(padding: EdgeInsets.only(left: 15) ,child: Text('ARRIVALS', style: TextStyle(color: maincolor, fontSize: 76, fontWeight: FontWeight.bold))),
-              Text('TODAY', style: TextStyle(color: maincolor, fontSize: 76, fontWeight: FontWeight.bold)),
-            ],
-          ),
+        child: ListView(  //TODO
+          children: [
+            SizedBox(height: 700, child: StandingsBox()),
+            SizedBox(height: 500, child: GamedayBox()),
+            TeamBox(),
+            SizedBox(height: 500, child: TwitterBox())
+          ],
         )
     );
   }
 }
+

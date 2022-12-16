@@ -25,24 +25,24 @@ class _InfoBoxState extends State<InfoBox> {
     return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
+            Padding(padding: const EdgeInsets.only(left: 15, top: 15, right: 15),  child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(padding: const EdgeInsets.only(left: 15),  child: Text('Good evening', style: themeData.textTheme.headline2,),),
+                Text('Good evening', style: themeData.textTheme.headline2,),
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {},
+                        onPressed: () {print('notifications');},
                         icon: const Icon(Icons.notifications_outlined)),
                     IconButton(
-                        onPressed: () {},
+                        onPressed: () {print('options');},
                         icon: const Icon(Icons.settings_outlined)),
                   ],
                 ),
               ],
-            ),
+            ),),
             const SizedBox(height: 15),
-            Expanded(
+            Flexible(
               child: ScrollSnapList(
                   itemBuilder: (context, index) {
                     return InfoBuilder(
@@ -65,10 +65,10 @@ class _InfoBoxState extends State<InfoBox> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SmoothIndicator(offset: cardindex.toDouble(), count: 3, effect: const SlideEffect(
-                  spacing: 16,
+                  spacing: 10,
                   dotColor: graycolor,
                   activeDotColor: maincolor,
-                  dotWidth: 60,
+                  dotWidth: 50,
                   dotHeight: 5,
                 ),
                 ),

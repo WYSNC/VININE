@@ -29,8 +29,9 @@ TextTheme TEXT_THEME_DEFAULT = const TextTheme(
   ),
   headline4: TextStyle(
       color: whitecolor,
-      fontSize: 14,
-      fontFamily: 'PlusJakartaSans'
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'PlusJakartaSans',
   ),
   headline5: TextStyle(
       color: whitecolor,

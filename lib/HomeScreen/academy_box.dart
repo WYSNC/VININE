@@ -11,20 +11,17 @@ class AcademyBox extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     double length = MediaQuery.of(context).size.width;
 
-    return Column(
+    return Padding(padding: const EdgeInsets.only(left: 15, top: 15, right: 15),  child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 15, top: 15),
-          child: Text(
+
+          Text(
             'Academy',
             style: themeData.textTheme.headline2,
           ),
-        ),
-        Padding(
-            padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        const SizedBox(height: 15,),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
@@ -96,8 +93,8 @@ class AcademyBox extends StatelessWidget {
                   ),
                 )
               ],
-            )),
-      ],
+            )
+      ])
     );
   }
 }

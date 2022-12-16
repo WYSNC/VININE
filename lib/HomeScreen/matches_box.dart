@@ -18,10 +18,10 @@ class MatchBox extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Row(
+        Padding(padding: const EdgeInsets.only(left: 15, top: 15, right: 15),  child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(padding: const EdgeInsets.only(left: 15),  child: Text('Matches', style: themeData.textTheme.headline2,),),
+            Text('Matches', style: themeData.textTheme.headline2,),
             Row(
               children: [
                 Text('Show more', style: themeData.textTheme.subtitle1,),
@@ -31,23 +31,20 @@ class MatchBox extends StatelessWidget {
               ],
             ),
           ],
-        ),
-
-
+        ),),
+        const SizedBox(height: 15,),
         Expanded(
           child: ScrollSnapList(
             itemCount: div4.schedule[0].matches.length,
             itemBuilder: (context , index) {
               return MatchBuilder(matchData: div4.schedule[index].matches[0],);
               },
-            initialIndex: 0,
+            initialIndex: 2,
             itemSize: length-30,
             dynamicItemSize: true,
             onItemFocus: (index) {  },
           ),
         ),
-
-
       ],
     );
   }

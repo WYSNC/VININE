@@ -61,3 +61,18 @@ class TeamData {
     required this.contact,
   });
 }
+
+class PlayerData {
+
+  final String firstname;
+  final String nickname;
+  final String lastname;
+  final String picture;
+
+  const PlayerData({
+    required this.firstname,
+    required this.nickname,
+    required this.lastname,
+    required this.picture,
+  });
+}

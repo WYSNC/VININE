@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class IntroPage extends StatelessWidget{
-  IntroPage({super.key, required this.title, required this.text});
+import '../homepage.dart';
+import '../utils/constants.dart';
 
-  String title;
-  String text;
+class IntroPage extends StatelessWidget {
+  IntroPage({super.key, required this.controller});
+
+  //String title;
+  //String text;
+  final controller;
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    double length = MediaQuery.of(context).size.width;
     final ThemeData themeData = Theme.of(context);
 
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/VININEBackground.png',),
+          image: AssetImage(
+            'assets/images/Introbackground.png',
+          ),
           fit: BoxFit.cover,
         ),
       ),
@@ -23,24 +29,72 @@ class IntroPage extends StatelessWidget{
         alignment: Alignment.topCenter,
         child: Padding(
           padding: const EdgeInsets.only(top: 100),
-          child: Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Image.asset(
-                'assets/images/VININELogoLong.png',
-                width: width-50,
-              ),
-              SizedBox(height: height/20,),
-              Text(title, style: themeData.textTheme.headline1),
-              SizedBox(height: height/35,),
-              SizedBox(
-                  width: width-50,
-                  child: Text(text, style: themeData.textTheme.bodyText2, textAlign: TextAlign.center)
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                    width: length - 30,
+                    height: 40,
+                    child: TextButton(
+                      onPressed: () {
+                        controller.nextPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOut
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                          foregroundColor: whitecolor,
+                          backgroundColor: blackcolor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      child: Text('Next', style: themeData.textTheme.headline6,),
+                    )),
+                SizedBox(
+                    width: length - 30,
+                    height: 40,
+                    child: TextButton(
+                        onPressed: () async {
+                          final prefs = await SharedPreferences.getInstance();
+                          prefs.setBool('showHome', true);
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => const MyHomePage())
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                            foregroundColor: whitecolor,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                        child: Text('Skip', style: themeData.textTheme.headline6,))),
+              ],
+            )
           ),
         ),
       ),
     );
   }
 }
+/*floatingActionButton: isLastPage
+            ? ElevatedButton(
+            onPressed: () async {
+              final prefs = await SharedPreferences.getInstance();
+              prefs.setBool('showHome', true);
+
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const MyHomePage())
+              );
+            }, child: const Text('OKAYYY LETS GO')
+        )
+
+            : FloatingActionButton(
+          onPressed: () =>
+              controller.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut
+              ),
+          child: const Icon(
+            Icons.arrow_forward_outlined,
+          ),
+        )*/

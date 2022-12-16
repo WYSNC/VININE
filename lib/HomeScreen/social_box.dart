@@ -8,17 +8,12 @@ class SocialBox extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     double length = MediaQuery.of(context).size.width;
 
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-        padding: const EdgeInsets.only(left: 15, top: 15),
-        child: Text(
-          'Social',
-          style: themeData.textTheme.headline2,
-        ),
-      ),
-      Padding(
-          padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
-          child: Column(
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, top: 15, right: 15),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text('Social', style: themeData.textTheme.headline2,),
+      const SizedBox(height: 15,),
+      Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
@@ -127,7 +122,7 @@ class SocialBox extends StatelessWidget {
                     )),
                   ],
                 ),
-              ]))
-    ]);
+              ])
+    ]));
   }
 }

@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           elevation: 0,
           centerTitle: true,
-          backgroundColor: Colors.lightGreen,
+          backgroundColor: Colors.transparent,
           foregroundColor: whitecolor
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -59,7 +59,13 @@ class MyApp extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           selectedItemColor: secondcolor,
         ),
-
+        dividerTheme: const DividerThemeData(
+          color: Colors.white,
+          thickness: 2
+        ),
+        textButtonTheme: TextButtonThemeData(
+          //style: TextButton.styleFrom(foregroundColor: whitecolor, backgroundColor: blackcolor,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
+        )
       ),
       home: showHome ? const MyHomePage() : IntroductionScreen(),
     );

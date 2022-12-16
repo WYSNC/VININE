@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:vinine/Academy/menu_screen.dart';
+import 'package:vinine/Menu/menu_screen.dart';
 import 'package:vinine/HomeScreen/home_screen.dart';
 import 'package:vinine/Primeleague/primeleague_screen.dart';
 import 'package:vinine/Shop/shop_screen.dart';
@@ -21,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const Home(),
     const Primeleague(),
     const Shop(),
-    const Menu(),
+    Menu(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,23 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
     return Scaffold(
-      //extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: const Text('TEST ONLY'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () async {
-              final prefs = await SharedPreferences.getInstance();
-              prefs.setBool('showHome', false);
-
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => IntroductionScreen())
-              );
-              },
-          ),
-        ],
-      ),
       body: screens[_selectedIndex],
       extendBody: true,
       bottomNavigationBar: BottomNavigationBar(

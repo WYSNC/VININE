@@ -20,11 +20,10 @@ class MatchCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          //Padding(padding: EdgeInsets.only(left: 20),child:
           Row(
             children: [
               Text(matchData.team1.shortname),
-              Image.asset(matchData.team1.logo, height: 40,),
+              Image.asset(matchData.team1.logo, height: 30,width: 30,),
             ],
           ),
           //),
@@ -37,7 +36,7 @@ class MatchCard extends StatelessWidget {
           ),
           Row(
             children: [
-              Image.asset(matchData.team2.logo, height: 40),
+              Image.asset(matchData.team2.logo, height: 30,width: 30),
               Text(matchData.team2.shortname),
             ],
           )

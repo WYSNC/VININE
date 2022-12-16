@@ -15,30 +15,23 @@ class StoreBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 15),
+          padding: const EdgeInsets.only(left: 15, top: 15),
           child: Text(
             'Store',
             style: themeData.textTheme.headline2,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15, top: 15),
-          child: SizedBox(
+        const SizedBox(height: 15,),
+        SizedBox(
             height: 200,
-            child: ListView.separated(
+            child: ListView.builder(
                 shrinkWrap: true,
-                separatorBuilder: (BuildContext context, int index) {
-                  return const SizedBox(
-                    width: 15,
-                  );
-                },
                 scrollDirection: Axis.horizontal,
                 itemCount: shopList.length,
                 itemBuilder: (context, index) {
                   return ShopPreBuilder(shopData: shopList[index]);
                 }),
           ),
-        ),
       ],
     );
   }
@@ -51,15 +44,18 @@ class ShopPreBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OpenContainer(
-      openColor: backgroundcolor,
-      closedColor: Colors.transparent,
-      closedElevation: 0,
-      transitionType: ContainerTransitionType.fade,
-      transitionDuration: const Duration(milliseconds: 700),
-      openBuilder: (context, _) => const ShopItem(),
-      closedBuilder: (context, VoidCallback openContainer) => SmallShopCard(
-        shopData: shopData,
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: OpenContainer(
+        openColor: backgroundcolor,
+        closedColor: Colors.transparent,
+        closedElevation: 0,
+        transitionType: ContainerTransitionType.fade,
+        transitionDuration: const Duration(milliseconds: 700),
+        openBuilder: (context, _) => const ShopItem(),
+        closedBuilder: (context, VoidCallback openContainer) => SmallShopCard(
+          shopData: shopData,
+        ),
       ),
     );
   }

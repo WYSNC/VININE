@@ -1,6 +1,14 @@
 import 'primeleague_classes.dart';
 
-final LeagueData div4 = LeagueData(name: 'Division 4.8', teams: teamList, schedule: schedule,);
+final LeagueData div4 = LeagueData(name: 'Div 4.8', teams: teamList, schedule: schedule,);
+
+const playerList= [
+  PlayerData(firstname: '????', nickname: 'Kamon', lastname: '?????', picture: 'assets/images/Kamon.png'),
+  PlayerData(firstname: 'Phil', nickname: 'Autophil', lastname: 'Cornelius', picture: 'assets/images/Autophil.png'),
+  PlayerData(firstname: 'Pius', nickname: 'Bladeshow', lastname: 'Cornelius', picture: 'assets/images/Pius1.png'),
+  PlayerData(firstname: 'Nico', nickname: 'Sola', lastname: 'Linke', picture: 'assets/images/sola.png'),
+  PlayerData(firstname: 'Philly', nickname: 'Kutcher', lastname: 'Westside', picture: 'assets/images/Kutcher.png'),
+];
 
 
 List<LeagueData> leagueList = [
@@ -215,8 +223,8 @@ List<MatchData> matchDay5 = [
     time: '21:30',
   ),
 ];
-const teamList = [
-  TeamData(
+List<TeamData> teamList = [
+  const TeamData(
     fullname: 'VININE',
     shortname: 'V9',
     logo: 'assets/images/VININELogoWhite.png',
@@ -229,7 +237,7 @@ const teamList = [
     nation: 'Germany',
     contact: 'xd',
   ),
-  TeamData(
+  const TeamData(
       fullname: 'TOG',
       shortname: 'TOG',
       logo: 'assets/images/TOGLogo.png',
@@ -242,7 +250,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'TOG Foxes',
       shortname: 'TOG F',
       logo: 'assets/images/TOGLogo.png',
@@ -255,7 +263,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'All for One Gaming',
       shortname: '141G',
       logo: 'assets/images/all41Logo.png',
@@ -268,7 +276,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'Kaufland Hangry Knights',
       shortname: 'KHK',
       logo: 'assets/images/KHKLogo.png',
@@ -281,7 +289,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'WeSports',
       shortname: 'WES',
       logo: 'assets/images/WELogo.png',
@@ -294,7 +302,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'ERN ROAR',
       shortname: 'ERN',
       logo: 'assets/images/ERNLogo.png',
@@ -307,7 +315,7 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
+  const TeamData(
       fullname: 'NoNeedOrga',
       shortname: 'NNO',
       logo: 'assets/images/NNO.png',
@@ -320,28 +328,28 @@ const teamList = [
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
-      fullname: 'NoNeedOrga',
-      shortname: 'NNO',
-      logo: 'assets/images/NNO.png',
+  const TeamData(
+      fullname: 'Sprout',
+      shortname: 'SPT',
+      logo: 'assets/images/Sprout.png',
       players: 5,
       div: '4.8',
-      wins: 0,
-      losses: 6,
-      rank: 8,
+      wins: 1,
+      losses: 9,
+      rank: 9,
       creationdate: '23.11.2020',
       nation: 'Germany',
       contact: 'xd'
   ),
-  TeamData(
-      fullname: 'NoNeedOrga',
-      shortname: 'NNO',
-      logo: 'assets/images/NNO.png',
+  const TeamData(
+      fullname: 'KIT',
+      shortname: 'KIT',
+      logo: 'assets/images/KIT.png',
       players: 5,
       div: '4.8',
       wins: 0,
-      losses: 6,
-      rank: 8,
+      losses: 10,
+      rank: 10,
       creationdate: '23.11.2020',
       nation: 'Germany',
       contact: 'xd'
